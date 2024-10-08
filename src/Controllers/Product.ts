@@ -47,7 +47,7 @@ class ProductController {
     let query = Product.find(condition);
     let totalProductsQuery = Product.find(condition);
 
-    console.log(req.query.category);
+    // console.log(req.query.category);
 
     if (req.query.category) {
       query = query.find({ category: { $in: (req.query.category as string).split(',') } });
@@ -67,7 +67,7 @@ class ProductController {
     }
 
     const totalDocs = await totalProductsQuery.countDocuments().exec();
-    console.log({ totalDocs });
+    // console.log({ totalDocs });
 
     if (req.query._page && req.query._limit) {
       const pageSize = Number(req.query._limit);

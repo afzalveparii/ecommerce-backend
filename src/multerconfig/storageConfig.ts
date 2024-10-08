@@ -59,11 +59,11 @@ const productImagesDir = path.join(__dirname, '..', 'public', 'uploads', 'produc
 const ensureDirectoriesExist = () => {
   if (!fs.existsSync(userProfileDir)) {
     fs.mkdirSync(userProfileDir, { recursive: true });
-    console.log('Created directory: ', userProfileDir);
+    // console.log('Created directory: ', userProfileDir);
   }
   if (!fs.existsSync(productImagesDir)) {
     fs.mkdirSync(productImagesDir, { recursive: true });
-    console.log('Created directory: ', productImagesDir);
+    // console.log('Created directory: ', productImagesDir);
   }
 };
 

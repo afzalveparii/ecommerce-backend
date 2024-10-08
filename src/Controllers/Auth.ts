@@ -24,7 +24,7 @@ class AuthController {
           let profilePicture = '';
           if (req.file) {
             profilePicture = req.file.filename;
-            console.log('Profile picture filename:', profilePicture);
+            // console.log('Profile picture filename:', profilePicture);
           }
           const user = new User({ ...req.body, password: hashedPassword, salt, profilePicture });
           const doc = await user.save();

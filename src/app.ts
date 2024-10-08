@@ -64,7 +64,7 @@ app.post(
         break;
       // ... handle other event types
       default:
-        console.log(`Unhandled event type ${event.type}`);
+        // console.log(`Unhandled event type ${event.type}`);
     }
 
     // Return a 200 response to acknowledge receipt of the event
@@ -97,7 +97,7 @@ app.use(passport.authenticate('session'));
 app.use(
   cors({
     exposedHeaders: ['X-Total-Count'],
-    origin: ['http://localhost:3000', 'http://localhost:5173', 'https://stapi.co'],
+    origin: ['http://localhost:3000', 'http://localhost:5173', 'https://ecommerce-project-developed-by-afzal.netlify.app', 'https://stapi.co'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
   })
